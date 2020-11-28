@@ -1,0 +1,18 @@
+[package]
+name = "native-addon"
+version = "0.1.0"
+authors = ["Krzysztof Zawisła <snowdropcurvemaster@gmail.com>"]
+license = "MIT"
+build = "build.rs"
+edition = "2018"
+exclude = ["artifacts.json", "index.node"]
+
+[lib]
+name = "native_addon"
+crate-type = ["cdylib"]
+
+[build-dependencies]
+neon-build = "0.5.1"
+
+[dependencies]
+neon = "0.5.1"

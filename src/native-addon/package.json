@@ -1,0 +1,14 @@
+{
+  "name": "native-addon",
+  "version": "0.1.0",
+  "description": "",
+  "main": "native/index.node",
+  "author": "Krzysztof Zawisła <snowdropcurvemaster@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "neon-cli": "^0.5.1"
+  },
+  "scripts": {
+    "install": "neon build"
+  }
+}

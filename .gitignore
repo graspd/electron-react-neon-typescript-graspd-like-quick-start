@@ -1,0 +1,7 @@
+**/node_modules
+src/native-addon/native/target
+src/native-addon/native/index.node
+src/native-addon/native/artifacts.json
+**/*~
+**/.DS_Store
+dist
