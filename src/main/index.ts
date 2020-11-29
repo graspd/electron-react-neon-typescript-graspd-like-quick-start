@@ -11,13 +11,17 @@ app.on("ready", (): void => {
     height: 600,
     minWidth: 320,
     minHeight: 400,
+    show: false,
     webPreferences: {
       contextIsolation: true,
       preload: path.join(__dirname, "..", "preload", "preload.js"),
     },
   });
   mainWindow.loadFile(path.join(__dirname, "..", "public", "index.html"));
-  mainWindow.webContents.openDevTools();
+  mainWindow!.on("ready-to-show", () => {
+    mainWindow!.show();
+    mainWindow!.webContents.openDevTools();
+  });
   console.log(hello());
 });
 

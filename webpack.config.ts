@@ -6,7 +6,7 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const config: Configuration[] = [
   {
-    mode: "development",
+    mode: "production",
     entry: path.join(__dirname, "src", "main"),
     target: "electron-main",
     devtool: "source-map",
