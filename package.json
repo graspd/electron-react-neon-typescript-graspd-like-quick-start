@@ -1,5 +1,5 @@
 {
-  "name": "electron-react-neon-typescript-graspd-like-quick-startext",
+  "name": "electron-react-neon-typescript-graspd-like-quick-start",
   "version": "1.0.0",
   "description": "Borderplate for creating app with Electron + React + Neon Bindings and TypeScript.",
   "main": "./dist/main/index.js",
@@ -17,10 +17,7 @@
     "audit-dependencies": "audit-ci --config audit-ci.json",
     "depcheck": "depcheck"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/graspd/electron-react-neon-typescript-graspd-like-quick-start.git"
-  },
+  "repository": "git+https://github.com/graspd/electron-react-neon-typescript-graspd-like-quick-start.git",
   "keywords": [
     "electron"
   ],
