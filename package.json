@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Borderplate for creating app with Electron + React + Neon Bindings and TypeScript.",
   "main": "./dist/main/index.js",
+  "private": true,
   "scripts": {
     "build-dev": "electron-build-env neon build native-addon && webpack --config webpack.config.ts --mode development",
     "build": "electron-build-env neon build native-addon --release && webpack --config webpack.config.ts",
