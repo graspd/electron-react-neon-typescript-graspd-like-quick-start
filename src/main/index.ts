@@ -1,5 +1,4 @@
 import "source-map-support/register";
-import { hello } from "native-addon";
 import path from "path";
 import { app, BrowserWindow } from "electron";
 
@@ -20,9 +19,8 @@ app.on("ready", (): void => {
   mainWindow.loadFile(path.join(__dirname, "..", "public", "index.html"));
   mainWindow!.on("ready-to-show", () => {
     mainWindow!.show();
-    mainWindow!.webContents.openDevTools();
+    // mainWindow!.webContents.openDevTools(); <- to enable devtools
   });
-  console.log(hello());
 });
 
 app.on("quit", (): void => {

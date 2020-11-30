@@ -1,7 +1,14 @@
-import React from "react";
+import React, { FC } from "react";
 
-const App = () => {
-  return <div>123</div>;
+interface AppProps {}
+
+const App: FC<AppProps> = (): JSX.Element => {
+  return (
+    <div>
+      <h1>Borderplate</h1>
+      <p>Some borderplate code</p>
+    </div>
+  );
 };
 
 export default App;

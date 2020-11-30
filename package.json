@@ -2,15 +2,16 @@
   "name": "electron-react-neon-typescript-graspd-like-quick-start",
   "version": "1.0.0",
   "description": "Borderplate for creating app with Electron + React + Neon Bindings and TypeScript.",
-  "main": "./dist/main/index.js",
+  "main": "dist/main/index.js",
   "private": true,
   "scripts": {
     "build-dev": "electron-build-env neon build native-addon && webpack --config webpack.config.ts --mode development",
     "build": "electron-build-env neon build native-addon --release && webpack --config webpack.config.ts",
     "start": "electron .",
     "build-and-start": "npm run build && npm run start",
-    "scan-dependencies": "ncu",
-    "update-dependencies": "ncu -u",
+    "build-and-start-dev" : "npm run build-dev && npm run start",
+    "scan-dependencies": "ncu && cd src/native-addon && ncu",
+    "update-dependencies": "ncu -u  && cd src/native-addon && ncu -u",
     "package-mac": "electron-packager . --overwrite --ignore=\"node_modules\" --ignore=\"src\" --ignore=\".gitignore\" --ignore=\"README.md\" --ignore=\"package-lock.json\" --ignore=\"webpack.config.ts\" --ignore=\"tsconfig.json\" --ignore=\"release-builds\" --ignore=\"audit-ci.json\" --platform=darwin --arch=x64 --prune=true --out=release-builds",
     "package-win-64": "electron-packager . --overwrite --ignore=\"node_modules\" --ignore=\"src\" --ignore=\".gitignore\" --ignore=\"README.md\" --ignore=\"package-lock.json\" --ignore=\"webpack.config.ts\" --ignore=\"tsconfig.json\" --ignore=\"release-builds\" --ignore=\"audit-ci.json\" --asar --platform=win32 --arch=x64 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ExampleApp\"",
     "package-win-32": "electron-packager . --overwrite --ignore=\"node_modules\" --ignore=\"src\" --ignore=\".gitignore\" --ignore=\"README.md\" --ignore=\"package-lock.json\" --ignore=\"webpack.config.ts\" --ignore=\"tsconfig.json\" --ignore=\"release-builds\" --ignore=\"audit-ci.json\" --asar --platform=win32 --arch=ia32 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"ExampleApp\"",
@@ -56,7 +57,7 @@
     "terser-webpack-plugin": "^5.0.3",
     "ts-node": "^9.0.0",
     "typescript": "^4.1.2",
-    "webpack": "^5.8.0",
+    "webpack": "^5.9.0",
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {

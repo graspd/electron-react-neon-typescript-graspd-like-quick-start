@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "description": "",
   "main": "native/index.node",
-  "author": "Krzysztof Zawisła <snowdropcurvemaster@gmail.com>",
+  "author": "Krzysztof Zawisła, Aurelia Korbela",
   "license": "MIT",
   "dependencies": {
-    "neon-cli": "^0.5.1"
+    "neon-cli": "^0.5.3"
   },
   "scripts": {
     "install": "neon build"
