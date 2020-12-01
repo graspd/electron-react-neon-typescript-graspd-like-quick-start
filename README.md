@@ -12,7 +12,7 @@ To customize your app change:
 
 ## Scripts
 
-```sh
+```txt
 npm run build // That script builds the whole project in performance mode.
 npm start // That script run project.
 npm run build-dev // That script builds the whole project in development mode.
