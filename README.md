@@ -81,3 +81,63 @@ npm run package-win-32 // That script packs project for 32-bit Windows.
 
 Webpack configuration uses swc instead of babel to speed up build process.
 
+Used loaders:
+- swc-loader
+- node-loader
+
+### Used packages
+
+Root folder:
+  - dependencies:
+    - electron-is-dev
+    - native-addon
+    - react
+    - react-dom
+    - react-helmet-async
+    - react-router-dom
+    - source-map-support
+    - styled-components
+  - devDependencies:
+    - @swc/cli
+    - @swc/core
+    - @swc/helpers
+    - @types/node
+    - @types/react
+    - @types/react-dom
+    - @types/source-map-support
+    - @types/terser-webpack-plugin
+    - audit-ci
+    - better-docs
+    - clean-webpack-plugin
+    - depcheck
+    - electron
+    - electron-build-env
+    - electron-packager
+    - html-webpack-plugin
+    - jsdoc
+    - lighthouse
+    - neon-cli
+    - node-loader
+    - npm-check-updates
+    - source-map-loader
+    - spectron
+    - swc-loader
+    - terser-webpack-plugin
+    - ts-node
+    - typescript
+    - webpack
+    - webpack-cli
+    
+Native addon directory:
+  - js:
+    - dependencies:
+      - neon-cli
+  - rust:
+    - dependencies:
+      - neon
+    - devDependencies:
+      - neon-build
+
+## Authors
+
+Krzysztof Zawisła, Aurelia Korbela
