@@ -1,6 +1,6 @@
 # electron-react-neon-typescript-graspd-like-quick-start
 
-Boilerplate for creating app with Electron + React + Neon Bindings and TypeScript with extra features. If you are searching for minimal boilerplate template without extra features look at not graspd like version -> [link](https://github.com/graspd/electron-react-neon-typescript-quick-start).
+Boilerplate for creating app using Electron + React + Neon Bindings and TypeScript with extra features. If you are searching for minimal boilerplate template without extra features look at not graspd like version -> [link](https://github.com/graspd/electron-react-neon-typescript-quick-start).
 
 ## Customization
 
