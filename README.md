@@ -14,7 +14,7 @@ To customize your app change:
 
 ```txt
 npm run build // That script builds the whole project in performance mode.
-npm start // That script run project.
+npm start // That script runs project.
 npm run build-dev // That script builds the whole project in development mode.
 npm run build-and-start // Equivalent to: npm run build && npm start.
 npm run build-dev-and-start // Equivalent to: npm run build-dev && npm start.
