@@ -10,6 +10,62 @@ To customize your app change:
 - Author in src/native-addon/package.json
 - Author in src/native-addon/native/Cargo.toml
 
+## Scripts
+
+```sh
+npm run build
+```
+
+That script builds the whole project in performance mode.
+
+```sh
+npm start
+```
+
+That script run project.
+
+```sh
+npm run build-dev
+```
+
+That script builds the whole project in development mode.
+
+```sh
+npm run build-and-start
+```
+
+Equivalent to: npm run build && npm start.
+
+```sh
+npm run build-dev-and-start
+```
+
+Equivalent to: npm run build-dev && npm start.
+
+```sh
+npm run scan-dependencies
+```
+
+That script checks for newest version of JS packages in root and `native-addon` directories.
+
+```sh
+npm run update-dependencies
+```
+
+That script updates JS packages in root and `native-addon` directories.
+
+```sh
+npm run audit-dependencies
+```
+
+That script checks vulnebilities in project.
+
+```sh
+npm run depcheck
+```
+
+That script shows unused dependencies.
+
 ## Technical things
 
 ### Source code structure
@@ -61,8 +117,5 @@ To customize your app change:
 
 ### Webpack
 
-Webpack configuration using swc instead of babel to speed up build process.
+Webpack configuration uses swc instead of babel to speed up build process.
 
-```
-
-```
