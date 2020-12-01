@@ -5,8 +5,8 @@ interface AppProps {}
 const App: FC<AppProps> = (): JSX.Element => {
   return (
     <div>
-      <h1>Borderplate</h1>
-      <p>Some borderplate code</p>
+      <h1>Boilerplate</h1>
+      <p>Some boilerplate code</p>
     </div>
   );
 };
