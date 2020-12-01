@@ -1,6 +1,6 @@
 # electron-react-neon-typescript-graspd-like-quick-start
 
-Boilerplate for creating app with Electron + React + Neon Bindings and TypeScript with extra features. If you are searching for minimal boilerplate template without extra features look at not graspd like version -> [link](https://github.com/graspd/electron-react-neon-typescript-quick-start)
+Boilerplate for creating app with Electron + React + Neon Bindings and TypeScript with extra features. If you are searching for minimal boilerplate template without extra features look at not graspd like version -> [link](https://github.com/graspd/electron-react-neon-typescript-quick-start).
 
 ## Customization
 
@@ -13,58 +13,20 @@ To customize your app change:
 ## Scripts
 
 ```sh
-npm run build
+npm run build // That script builds the whole project in performance mode.
+npm start // That script run project.
+npm run build-dev // That script builds the whole project in development mode.
+npm run build-and-start // Equivalent to: npm run build && npm start.
+npm run build-dev-and-start // Equivalent to: npm run build-dev && npm start.
+npm run scan-dependencies // That script checks for newest version of JS packages in root and native-addon directories.
+npm run update-dependencies // That script updates JS packages in root and native-addon directories.
+npm run audit-dependencies // That script checks vulnebilities in project.
+npm run depcheck // That script shows unused dependencies.
+npm run package-mac // That script packs project for macOS.
+npm run package-linux // That script packs project for Linux.
+npm run package-win-64 // That script packs project for 64-bit Windows.
+npm run package-win-32 // That script packs project for 32-bit Windows.
 ```
-
-That script builds the whole project in performance mode.
-
-```sh
-npm start
-```
-
-That script run project.
-
-```sh
-npm run build-dev
-```
-
-That script builds the whole project in development mode.
-
-```sh
-npm run build-and-start
-```
-
-Equivalent to: npm run build && npm start.
-
-```sh
-npm run build-dev-and-start
-```
-
-Equivalent to: npm run build-dev && npm start.
-
-```sh
-npm run scan-dependencies
-```
-
-That script checks for newest version of JS packages in root and `native-addon` directories.
-
-```sh
-npm run update-dependencies
-```
-
-That script updates JS packages in root and `native-addon` directories.
-
-```sh
-npm run audit-dependencies
-```
-
-That script checks vulnebilities in project.
-
-```sh
-npm run depcheck
-```
-
-That script shows unused dependencies.
 
 ## Technical things
 
