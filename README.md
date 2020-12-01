@@ -12,31 +12,51 @@ To customize your app change:
 
 ## Technical things
 
-### Structure
+### Source code structure
 
 ```txt
-  | dist // output directory
-  | node_modules
-  | release-builds
-    | appname-platform-architecture
   | src
     | main // main process
       | index.ts // main process entrypoint
-    | native-addon // neon-bindings installed as native-addon via npm
+    | native-addon // native addon that uses neon-bindings
       | native
         | src
           | lib.rs // rust entrypoint
-        build.rs // rust build script
-        Cargo.toml // rust config
+        | build.rs // rust build script
+        | Cargo.toml // rust config
+        | Cargo.lock
       | package.json
     | preload // preload
+      | preload.ts // preload entrypoint
     | render // render process
       | index.tsx // render process entrypoint
       | App.tsx // App component
     | public // folder with html, images, etc.
       | index.html // entypoint for HtmlWebpackPlugin
-  | .gitignore
+    | global.d.ts // types for native-addon and other untyped third party libraries
   | audit-ci.json // config to audit dependencies
+  | package-lock.json
+  | package.json
+  | tsconfig.json // config for TypeScript
+  | webpack.config.ts // config for Webpack
+```
+
+### Output structure
+
+```txt
+  | dist
+    | main
+      | index.js
+      | index.js.map
+      | randomnumbers.node // (if native addon is imported)
+    | preload
+      | preload.js
+    | public
+      | index.html
+    | renderer
+      | index.js
+      | index.js.LICENSE.txt
+      | index.js.map
 ```
 
 ### Webpack
