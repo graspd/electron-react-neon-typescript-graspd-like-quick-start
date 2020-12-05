@@ -47,7 +47,7 @@
     "electron-packager": "^15.1.0",
     "html-webpack-plugin": "^4.5.0",
     "jsdoc": "^3.6.6",
-    "lighthouse": "^6.4.1",
+    "lighthouse": "^6.5.0",
     "neon-cli": "^0.5.3",
     "node-loader": "^1.0.2",
     "npm-check-updates": "^10.2.2",
