@@ -4,6 +4,7 @@ import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import TerserPlugin from "terser-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 const setupConfig = (
   _env: unknown,
@@ -66,6 +67,10 @@ const setupConfig = (
           failOnError: true,
           failOnWarning: true,
         }),
+        new BundleAnalyzerPlugin({
+          analyzerMode: mode === "development" ? "static" : "disabled",
+          openAnalyzer: false
+        })
       ],
     },
     {
@@ -135,6 +140,10 @@ const setupConfig = (
           failOnError: true,
           failOnWarning: true,
         }),
+        new BundleAnalyzerPlugin({
+          analyzerMode: mode === "development" ? "static" : "disabled",
+          openAnalyzer: false
+        })
       ],
     },
     {
@@ -189,6 +198,10 @@ const setupConfig = (
           failOnError: true,
           failOnWarning: true,
         }),
+        new BundleAnalyzerPlugin({
+          analyzerMode: mode === "development" ? "static" : "disabled",
+          openAnalyzer: false
+        })
       ],
     },
   ];
