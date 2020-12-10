@@ -18,7 +18,7 @@
     "package-linux": "electron-packager . --overwrite --ignore=\"node_modules\" --ignore=\"src\" --ignore=\".gitignore\" --ignore=\"README.md\" --ignore=\"package-lock.json\" --ignore=\"webpack.config.ts\" --ignore=\"tsconfig.json\" --ignore=\"release-builds\" --ignore=\"audit-ci.json\" --asar --platform=linux --arch=x64 --prune=true --out=release-builds",
     "audit-dependencies": "audit-ci --config audit-ci.json",
     "depcheck": "depcheck",
-    "lint": "eslint -f unix \"src/**/*.{ts,tsx}\""
+    "lint": "eslint -f unix \"src/**/*.{ts,tsx}\" && prettier --write \"src/**/*.{ts,tsx}\""
   },
   "repository": "git+https://github.com/graspd/electron-react-neon-typescript-graspd-like-quick-start.git",
   "keywords": [
