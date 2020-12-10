@@ -19,7 +19,7 @@ app.on("ready", (): void => {
   mainWindow.loadFile(path.join(__dirname, "..", "public", "index.html"));
   mainWindow.on("ready-to-show", () => {
     mainWindow?.show();
-    // mainWindow!.webContents.openDevTools(); <- to enable devtools
+    // mainWindow?.webContents.openDevTools(); <- to enable devtools
   });
 });
 
