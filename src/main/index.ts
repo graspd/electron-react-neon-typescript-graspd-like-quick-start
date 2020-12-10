@@ -24,5 +24,5 @@ app.on("ready", (): void => {
 });
 
 app.on("quit", (): void => {
-  mainWindow = null;
-});
+  mainWindow = null
+})
