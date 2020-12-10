@@ -7,7 +7,7 @@ import ESLintPlugin from "eslint-webpack-plugin";
 
 const setupConfig = (
   _env: unknown,
-  { mode }: { mode: string }
+  { mode }: { mode: string },
 ): Configuration[] => {
   const config: Configuration[] = [
     {
@@ -26,7 +26,7 @@ const setupConfig = (
                 loader: "swc-loader",
                 options: {
                   sync: true,
-                  minify: mode === "development" ? false : true,
+                  minify: mode !== "development",
                   jsc: {
                     loose: true,
                     externalHelpers: true,
@@ -73,7 +73,7 @@ const setupConfig = (
       entry: path.join(__dirname, "src", "renderer", "index.tsx"),
       target: "electron-renderer",
       optimization: {
-        minimize: mode === "development" ? false : true,
+        minimize: mode !== "development",
         minimizer: [new TerserPlugin()],
       },
       devtool: "source-map",
@@ -93,7 +93,7 @@ const setupConfig = (
                 loader: "swc-loader",
                 options: {
                   sync: true,
-                  minify: mode === "development" ? false : true,
+                  minify: mode !== "development",
                   jsc: {
                     externalHelpers: true,
                     loose: true,
@@ -125,7 +125,7 @@ const setupConfig = (
         new HtmlWebpackPlugin({
           template: path.join(__dirname, "src", "public", "index.html"),
           filename: path.join(__dirname, "dist", "public", "index.html"),
-          minify: mode === "development" ? false : true,
+          minify: mode !== "development",
         }),
         new CleanWebpackPlugin(),
         new ESLintPlugin({
@@ -153,7 +153,7 @@ const setupConfig = (
                 loader: "swc-loader",
                 options: {
                   sync: true,
-                  minify: mode === "development" ? false : true,
+                  minify: mode !== "development",
                   jsc: {
                     externalHelpers: true,
                     loose: true,
