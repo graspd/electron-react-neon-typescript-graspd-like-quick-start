@@ -7,7 +7,8 @@
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended"
+    "plugin:@typescript-eslint/recommended",
+    "plugin:jsdoc/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,7 +18,7 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "eslint-plugin-tsdoc"],
+  "plugins": ["react", "@typescript-eslint", "eslint-plugin-tsdoc", "jsdoc"],
   "rules": {
     "indent": ["error", 2],
     "linebreak-style": ["error", "unix"],
