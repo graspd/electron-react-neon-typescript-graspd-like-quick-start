@@ -3,8 +3,12 @@ import { Configuration } from "webpack";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import TerserPlugin from "terser-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import ESLintPlugin from "eslint-webpack-plugin";
 
-const setupConfig = (_env: any, { mode }: { mode: string }) => {
+const setupConfig = (
+  _env: unknown,
+  { mode }: { mode: string }
+): Configuration[] => {
   const config: Configuration[] = [
     {
       mode: mode === "development" ? mode : "production",
@@ -53,7 +57,16 @@ const setupConfig = (_env: any, { mode }: { mode: string }) => {
       resolve: {
         extensions: [".js", ".ts", ".json"],
       },
-      plugins: [new CleanWebpackPlugin()],
+      plugins: [
+        new CleanWebpackPlugin(),
+        new ESLintPlugin({
+          extensions: ["ts"],
+          emitError: true,
+          emitWarning: true,
+          failOnError: true,
+          failOnWarning: true,
+        }),
+      ],
     },
     {
       mode: mode === "development" ? mode : "production",
@@ -115,6 +128,13 @@ const setupConfig = (_env: any, { mode }: { mode: string }) => {
           minify: mode === "development" ? false : true,
         }),
         new CleanWebpackPlugin(),
+        new ESLintPlugin({
+          extensions: ["ts", "tsx"],
+          emitError: true,
+          emitWarning: true,
+          failOnError: true,
+          failOnWarning: true,
+        }),
       ],
     },
     {
@@ -160,7 +180,16 @@ const setupConfig = (_env: any, { mode }: { mode: string }) => {
       resolve: {
         extensions: [".js", ".ts", ".json"],
       },
-      plugins: [new CleanWebpackPlugin()],
+      plugins: [
+        new CleanWebpackPlugin(),
+        new ESLintPlugin({
+          extensions: ["ts"],
+          emitError: true,
+          emitWarning: true,
+          failOnError: true,
+          failOnWarning: true,
+        }),
+      ],
     },
   ];
   return config;
