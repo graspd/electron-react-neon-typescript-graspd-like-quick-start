@@ -35,7 +35,7 @@
     "@swc/cli": "^0.1.27",
     "@swc/core": "^1.2.40",
     "@swc/helpers": "^0.2.4",
-    "@types/node": "^14.14.10",
+    "@types/node": "^14.14.12",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/source-map-support": "^0.5.3",
