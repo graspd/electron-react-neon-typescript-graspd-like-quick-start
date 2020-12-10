@@ -32,7 +32,7 @@
   "homepage": "https://github.com/graspd/electron-react-neon-typescript-graspd-like-quick-start#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm lint"
+      "pre-commit": "npm run lint"
     }
   },
   "devDependencies": {
