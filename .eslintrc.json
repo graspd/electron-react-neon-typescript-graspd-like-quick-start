@@ -22,7 +22,15 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "eslint-plugin-tsdoc", "jsdoc", "jest", "prettier", "unicorn"],
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "eslint-plugin-tsdoc",
+    "jsdoc",
+    "jest",
+    "prettier",
+    "unicorn"
+  ],
   "settings": {
     "react": {
       "version": "detect"
