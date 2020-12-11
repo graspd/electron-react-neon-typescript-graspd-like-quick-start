@@ -38,6 +38,7 @@
   },
   "rules": {
     "no-invalid-this": "error",
+    "no-console": "warn",
     "unicorn/better-regex": "error",
     "unicorn/catch-error-name": "error",
     "unicorn/consistent-function-scoping": "error",
