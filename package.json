@@ -96,6 +96,7 @@
     "react-helmet-async": "^1.0.7",
     "react-router-dom": "^5.2.0",
     "source-map-support": "^0.5.19",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "v8-compile-cache": "^2.2.0"
   }
 }
