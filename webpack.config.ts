@@ -5,6 +5,7 @@ import TerserPlugin from "terser-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ESLintPlugin from "eslint-webpack-plugin";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
+import CaseSensitivePathsPlugin from "case-sensitive-paths-webpack-plugin";
 
 const setupConfig = (
   _env: unknown,
@@ -69,8 +70,9 @@ const setupConfig = (
         }),
         new BundleAnalyzerPlugin({
           analyzerMode: mode === "development" ? "static" : "disabled",
-          openAnalyzer: false
-        })
+          openAnalyzer: false,
+        }),
+        new CaseSensitivePathsPlugin(),
       ],
     },
     {
@@ -142,8 +144,9 @@ const setupConfig = (
         }),
         new BundleAnalyzerPlugin({
           analyzerMode: mode === "development" ? "static" : "disabled",
-          openAnalyzer: false
-        })
+          openAnalyzer: false,
+        }),
+        new CaseSensitivePathsPlugin(),
       ],
     },
     {
@@ -200,8 +203,9 @@ const setupConfig = (
         }),
         new BundleAnalyzerPlugin({
           analyzerMode: mode === "development" ? "static" : "disabled",
-          openAnalyzer: false
-        })
+          openAnalyzer: false,
+        }),
+        new CaseSensitivePathsPlugin(),
       ],
     },
   ];
