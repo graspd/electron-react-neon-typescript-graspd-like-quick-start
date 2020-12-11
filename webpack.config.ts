@@ -8,7 +8,7 @@ import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 import CaseSensitivePathsPlugin from "case-sensitive-paths-webpack-plugin";
 
 const setupConfig = (
-  _env: unknown,
+  _environment: unknown,
   { mode }: { mode: string },
 ): Configuration[] => {
   const config: Configuration[] = [
