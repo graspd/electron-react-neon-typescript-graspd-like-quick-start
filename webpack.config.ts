@@ -22,26 +22,13 @@ const setupConfig = (
           {
             test: /\.ts$/,
             include: path.join(__dirname, "src", "main"),
-            exclude: /node_modules/,
+            exclude: /(node_modules|bower_components)/,
             use: [
               {
-                loader: "swc-loader",
+                loader: "babel-loader",
                 options: {
-                  sync: true,
-                  minify: mode !== "development",
-                  jsc: {
-                    loose: true,
-                    externalHelpers: true,
-                    parser: {
-                      syntax: "typescript",
-                      decorators: true,
-                      dynamicImport: true,
-                    },
-                  },
-                  module: {
-                    strict: true,
-                    strictMode: true,
-                  },
+                  presets: ["@babel/env", "@babel/preset-typescript"],
+                  plugins: ["@babel/plugin-proposal-class-properties"],
                 },
               },
             ],
@@ -93,27 +80,17 @@ const setupConfig = (
           {
             test: /\.(ts|tsx)$/,
             include: path.join(__dirname, "src", "renderer"),
-            exclude: /node_modules/,
+            exclude: /(node_modules|bower_components)/,
             use: [
               {
-                loader: "swc-loader",
+                loader: "babel-loader",
                 options: {
-                  sync: true,
-                  minify: mode !== "development",
-                  jsc: {
-                    externalHelpers: true,
-                    loose: true,
-                    parser: {
-                      syntax: "typescript",
-                      tsx: true,
-                      decorators: true,
-                      dynamicImport: true,
-                    },
-                  },
-                  module: {
-                    strict: true,
-                    strictMode: true,
-                  },
+                  presets: [
+                    "@babel/env",
+                    "@babel/preset-typescript",
+                    "@babel/preset-react",
+                  ],
+                  plugins: ["@babel/plugin-proposal-class-properties"],
                 },
               },
             ],
@@ -157,26 +134,13 @@ const setupConfig = (
           {
             test: /\.(ts|tsx)$/,
             include: path.join(__dirname, "src", "preload"),
-            exclude: /node_modules/,
+            exclude: /(node_modules|bower_components)/,
             use: [
               {
-                loader: "swc-loader",
+                loader: "babel-loader",
                 options: {
-                  sync: true,
-                  minify: mode !== "development",
-                  jsc: {
-                    externalHelpers: true,
-                    loose: true,
-                    parser: {
-                      syntax: "typescript",
-                      decorators: true,
-                      dynamicImport: true,
-                    },
-                  },
-                  module: {
-                    strict: true,
-                    strictMode: true,
-                  },
+                  presets: ["@babel/env", "@babel/preset-typescript"],
+                  plugins: ["@babel/plugin-proposal-class-properties"],
                 },
               },
             ],
