@@ -66,7 +66,6 @@ const setupConfig = (
           emitError: true,
           emitWarning: true,
           failOnError: true,
-          failOnWarning: true,
         }),
         new BundleAnalyzerPlugin({
           analyzerMode: mode === "development" ? "static" : "disabled",
@@ -140,7 +139,6 @@ const setupConfig = (
           emitError: true,
           emitWarning: true,
           failOnError: true,
-          failOnWarning: true,
         }),
         new BundleAnalyzerPlugin({
           analyzerMode: mode === "development" ? "static" : "disabled",
@@ -199,7 +197,6 @@ const setupConfig = (
           emitError: true,
           emitWarning: true,
           failOnError: true,
-          failOnWarning: true,
         }),
         new BundleAnalyzerPlugin({
           analyzerMode: mode === "development" ? "static" : "disabled",
