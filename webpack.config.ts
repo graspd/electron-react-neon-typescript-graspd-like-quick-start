@@ -28,7 +28,7 @@ const setupConfig = (
                 loader: "babel-loader",
                 options: {
                   presets: ["@babel/env", "@babel/preset-typescript"],
-                  plugins: ["@babel/plugin-external-helpers"],
+                  plugins: ["lodash"],
                 },
               },
             ],
@@ -87,7 +87,7 @@ const setupConfig = (
                     "@babel/preset-typescript",
                     "@babel/preset-react",
                   ],
-                  plugins: ["@babel/plugin-external-helpers"],
+                  plugins: ["lodash"],
                 },
               },
             ],
@@ -134,7 +134,7 @@ const setupConfig = (
                 loader: "babel-loader",
                 options: {
                   presets: ["@babel/env", "@babel/preset-typescript"],
-                  plugins: ["@babel/plugin-external-helpers"],
+                  plugins: ["lodash"],
                 },
               },
             ],

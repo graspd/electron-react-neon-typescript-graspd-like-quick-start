@@ -8,6 +8,7 @@
     "build-dev": "electron-build-env neon build native-addon && tsc && webpack --config webpack.config.ts --mode development",
     "build": "electron-build-env neon build native-addon --release && tsc && webpack --config webpack.config.ts",
     "start": "electron .",
+    "start-dev": "set NODE_ENV=development && npm run start",
     "build-and-start": "npm run build && npm run start",
     "build-and-start-dev": "npm run build-dev && npm run start",
     "scan-dependencies": "ncu && cd src/native-addon && ncu",
@@ -53,6 +54,7 @@
     "@typescript-eslint/parser": "^4.9.1",
     "audit-ci": "^3.1.1",
     "babel-loader": "^8.2.2",
+    "babel-plugin-lodash": "^3.3.4",
     "better-docs": "^2.3.2",
     "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "clean-webpack-plugin": "^3.0.0",
@@ -91,7 +93,9 @@
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
+    "electron-hot-reload": "^0.1.4",
     "electron-is-dev": "^1.2.0",
+    "lodash": "^4.17.20",
     "native-addon": "file:src/native-addon",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
