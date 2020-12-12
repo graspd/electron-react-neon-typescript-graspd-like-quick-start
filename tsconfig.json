@@ -16,6 +16,7 @@
     "downlevelIteration": true,
     "pretty": true,
     "noEmit": true,
+    "isolatedModules": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "removeComments": true,

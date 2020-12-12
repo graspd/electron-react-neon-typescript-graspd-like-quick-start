@@ -28,14 +28,14 @@ const setupConfig = (
                 loader: "babel-loader",
                 options: {
                   presets: ["@babel/env", "@babel/preset-typescript"],
-                  plugins: ["@babel/plugin-proposal-class-properties"],
+                  plugins: ["@babel/plugin-external-helpers"],
                 },
               },
             ],
           },
           {
             test: /\.node$/,
-            loader: "node-loader",
+            use: ["node-loader"],
           },
         ],
       },
@@ -50,9 +50,6 @@ const setupConfig = (
         new CleanWebpackPlugin(),
         new ESLintPlugin({
           extensions: ["ts"],
-          emitError: true,
-          emitWarning: true,
-          failOnError: true,
         }),
         new BundleAnalyzerPlugin({
           analyzerMode: mode === "development" ? "static" : "disabled",
@@ -90,7 +87,7 @@ const setupConfig = (
                     "@babel/preset-typescript",
                     "@babel/preset-react",
                   ],
-                  plugins: ["@babel/plugin-proposal-class-properties"],
+                  plugins: ["@babel/plugin-external-helpers"],
                 },
               },
             ],
@@ -113,9 +110,6 @@ const setupConfig = (
         new CleanWebpackPlugin(),
         new ESLintPlugin({
           extensions: ["ts", "tsx"],
-          emitError: true,
-          emitWarning: true,
-          failOnError: true,
         }),
         new BundleAnalyzerPlugin({
           analyzerMode: mode === "development" ? "static" : "disabled",
@@ -140,10 +134,14 @@ const setupConfig = (
                 loader: "babel-loader",
                 options: {
                   presets: ["@babel/env", "@babel/preset-typescript"],
-                  plugins: ["@babel/plugin-proposal-class-properties"],
+                  plugins: ["@babel/plugin-external-helpers"],
                 },
               },
             ],
+          },
+          {
+            test: /\.node$/,
+            use: ["node-loader"],
           },
         ],
       },
@@ -158,9 +156,6 @@ const setupConfig = (
         new CleanWebpackPlugin(),
         new ESLintPlugin({
           extensions: ["ts"],
-          emitError: true,
-          emitWarning: true,
-          failOnError: true,
         }),
         new BundleAnalyzerPlugin({
           analyzerMode: mode === "development" ? "static" : "disabled",

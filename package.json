@@ -5,8 +5,8 @@
   "main": "dist/main/index.js",
   "private": true,
   "scripts": {
-    "build-dev": "electron-build-env neon build native-addon && webpack --config webpack.config.ts --mode development",
-    "build": "electron-build-env neon build native-addon --release && webpack --config webpack.config.ts",
+    "build-dev": "electron-build-env neon build native-addon && tsc && webpack --config webpack.config.ts --mode development",
+    "build": "electron-build-env neon build native-addon --release && tsc && webpack --config webpack.config.ts",
     "start": "electron .",
     "build-and-start": "npm run build && npm run start",
     "build-and-start-dev": "npm run build-dev && npm run start",
@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-external-helpers": "^7.12.1",
     "@babel/preset-env": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
