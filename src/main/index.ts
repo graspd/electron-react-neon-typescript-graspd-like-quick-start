@@ -25,7 +25,9 @@ if (!gotTheLock) {
 } else {
   app.on("second-instance", (): void => {
     if (mainWindow) {
-      if (mainWindow.isMinimized()) mainWindow.restore();
+      if (mainWindow.isMinimized()) {
+        mainWindow.restore();
+      }
       mainWindow.focus();
     }
   });
@@ -42,7 +44,7 @@ if (!gotTheLock) {
       },
     });
     mainWindow.loadFile(path.join(__dirname, "..", "public", "index.html"));
-    mainWindow.on("ready-to-show", () => {
+    mainWindow.on("ready-to-show", (): void => {
       mainWindow?.show();
     });
   });
