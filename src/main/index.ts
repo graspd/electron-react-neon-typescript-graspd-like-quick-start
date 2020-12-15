@@ -2,19 +2,6 @@ import "v8-compile-cache";
 import "source-map-support/register";
 import path from "path";
 import { app, BrowserWindow } from "electron";
-import { mainReloader } from "electron-hot-reload";
-import isDev from "electron-is-dev";
-
-if (isDev) {
-  const mainFile: string = path.join(__dirname, "index.js");
-  mainReloader(mainFile, undefined, (): void => {
-    const date: Date = new Date();
-    // eslint-disable-next-line no-console
-    console.log(
-      `[Reloaded at]: ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}:${date.getMilliseconds()}`,
-    );
-  });
-}
 
 let mainWindow: BrowserWindow | null;
 
