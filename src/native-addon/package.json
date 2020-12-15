@@ -6,7 +6,7 @@
   "author": "Krzysztof Zawisła, Aurelia Korbela",
   "license": "MIT",
   "dependencies": {
-    "neon-cli": "^0.5.3"
+    "neon-cli": "^0.6.0"
   },
   "scripts": {
     "install": "neon build"
