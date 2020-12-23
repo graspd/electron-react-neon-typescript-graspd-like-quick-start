@@ -38,6 +38,7 @@
   },
   "rules": {
     "no-invalid-this": "error",
+    "react/react-in-jsx-scope": "off",
     "no-console": "warn",
     "unicorn/better-regex": "error",
     "unicorn/catch-error-name": "error",

@@ -1,5 +1,5 @@
 import path from "path";
-import { Configuration } from "webpack";
+import { Configuration, ProvidePlugin } from "webpack";
 import { CleanWebpackPlugin } from "clean-webpack-plugin";
 import TerserPlugin from "terser-webpack-plugin";
 import HtmlWebpackPlugin from "html-webpack-plugin";
@@ -102,6 +102,9 @@ const setupConfig = (
         extensions: [".js", ".ts", ".tsx", ".jsx", ".json"],
       },
       plugins: [
+        new ProvidePlugin({
+          React: "react",
+        }),
         new HtmlWebpackPlugin({
           template: path.join(__dirname, "src", "public", "index.html"),
           filename: path.join(__dirname, "dist", "public", "index.html"),
