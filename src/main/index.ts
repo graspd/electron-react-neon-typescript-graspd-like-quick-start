@@ -2,10 +2,23 @@ import "v8-compile-cache";
 import "source-map-support/register";
 import path from "path";
 import { app, BrowserWindow } from "electron";
+import express, { Express } from "express";
+
+const server: Express = express();
+server.use(express.static(path.join(__dirname, "..", "public")));
+server.use("/renderer", express.static(path.join(__dirname, "..", "renderer")));
+let port: number = 21370;
 
 let mainWindow: BrowserWindow | null;
 
 const gotTheLock: boolean = app.requestSingleInstanceLock();
+
+const setupServerListening = (): void => {
+  server.listen(port).on("error", (): void => {
+    port++;
+    setupServerListening();
+  });
+};
 
 if (!gotTheLock) {
   app.quit();
@@ -19,6 +32,7 @@ if (!gotTheLock) {
     }
   });
   app.on("ready", (): void => {
+    setupServerListening();
     mainWindow = new BrowserWindow({
       width: 800,
       height: 600,
@@ -30,7 +44,7 @@ if (!gotTheLock) {
         preload: path.join(__dirname, "..", "preload", "preload.js"),
       },
     });
-    mainWindow.loadFile(path.join(__dirname, "..", "public", "index.html"));
+    mainWindow.loadURL(`http://localhost:${port}`);
     mainWindow.on("ready-to-show", (): void => {
       mainWindow?.show();
     });

@@ -37,6 +37,7 @@
     }
   },
   "rules": {
+    "@typescript-eslint/no-inferrable-types": "off",
     "no-invalid-this": "error",
     "react/react-in-jsx-scope": "off",
     "no-console": "warn",
