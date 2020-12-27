@@ -12,7 +12,8 @@
     "plugin:jsdoc/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended",
-    "prettier"
+    "prettier",
+    "plugin:sonarjs/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -29,7 +30,8 @@
     "jsdoc",
     "jest",
     "prettier",
-    "unicorn"
+    "unicorn",
+    "sonarjs"
   ],
   "settings": {
     "react": {
