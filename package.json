@@ -98,7 +98,7 @@
     "electron-is-dev": "^1.2.0",
     "express": "^4.17.1",
     "is-electron": "^2.2.0",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "native-addon": "file:src/native-addon",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
